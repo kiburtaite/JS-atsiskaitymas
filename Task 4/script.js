@@ -19,7 +19,9 @@ fetch(ENDPOINT)
 let show = (data) => {
     data.forEach(data => {
         document.querySelector("#output").innerHTML +=
-        `<h2>${data.brand}</h2>
-        <p>${data.models}</p>`
+        `<div>
+        <h2>${data.brand}</h2>
+        <p>${data.models}</p>
+        </div>`
     })
 }
