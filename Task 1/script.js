@@ -8,3 +8,13 @@ pamatyti jo pateikto svorio konvertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+document.querySelector("form").addEventListener("submit", e => {
+    e.preventDefault();
+    let kilos = e.target.search.value;
+    let pounds = kilos*2.2046;
+    let grams = kilos*1000;
+    let ounces = kilos*35.274;
+    document.querySelector("#output").innerHTML =
+    `${kilos} kg = ${pounds} lb = ${grams} g = ${ounces} oz`
+})
