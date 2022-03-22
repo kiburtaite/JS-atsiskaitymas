@@ -5,3 +5,18 @@ subtraction() - priima du skaičius ir grąžina jų skirtumą;
 multiplication() - priima du skaičius ir grąžina jų daugybos rezultatą;
 division() - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
+
+class Calculator{
+    sum(number1, number2){
+        return (number1 + number2)
+    }
+    substraction(number1, number2){
+        return (number1 - number2)
+    }
+    multiplication(number1, number2){
+        return (number1 * number2)
+    }
+    division(number1, number2){
+        return (number1 / number2)
+    }
+}
