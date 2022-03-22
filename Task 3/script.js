@@ -20,8 +20,10 @@ document.querySelector("#btn").addEventListener("click", () => {
     message.setAttribute("hidden", "true");
 })
 
-let show = (user) => {
-    document.querySelector("#output").innerHTML =
-    `<h2>${user.map(user => user.login)}</h2>
-    <img src="${user.map(user => user.avatar_url)}">`
+let show = (data) => {
+    data.forEach(data => {
+    document.querySelector("#output").innerHTML +=
+    `<h2>${data.login}</h2>
+    <img src="${data.avatar_url}">`
+    })
 }
