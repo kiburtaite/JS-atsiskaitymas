@@ -11,3 +11,17 @@ Pastaba: Informacija apie user'į (jo kortelė) bei turi turėti bent minimalų 
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'https://api.github.com/users';
+
+document.querySelector("#btn").addEventListener("click", () => {
+    fetch(ENDPOINT)
+        .then(res => res.json())
+        .then(user => show(user));
+    let message = document.querySelector("#message");
+    message.setAttribute("hidden", "true");
+})
+
+let show = (user) => {
+    document.querySelector("#output").innerHTML =
+    `<h2>${user.map(user => user.login)}</h2>
+    <img src="${user.map(user => user.avatar_url)}">`
+}
