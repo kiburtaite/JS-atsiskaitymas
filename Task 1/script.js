@@ -12,9 +12,10 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 document.querySelector("form").addEventListener("submit", e => {
     e.preventDefault();
     let kilos = e.target.search.value;
-    let pounds = kilos*2.2046;
+    let pounds = (kilos*2.2046).toFixed(2);
     let grams = kilos*1000;
-    let ounces = kilos*35.274;
+    let ounces = (kilos*35.274).toFixed(2);
     document.querySelector("#output").innerHTML =
-    `${kilos} kg = ${pounds} lb = ${grams} g = ${ounces} oz`
+    `<h1>${kilos} kg = ${pounds} lb = ${grams} g = ${ounces} oz</h1>`;
+    e.target.search.value = ""
 })

@@ -1,3 +1,10 @@
+/*custom*/
+
+#output{
+  text-align: center;
+  font-size: 26px;
+}
+
 /* Resets */
 * {
   margin: 0;
