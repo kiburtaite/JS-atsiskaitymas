@@ -23,7 +23,9 @@ document.querySelector("#btn").addEventListener("click", () => {
 let show = (data) => {
     data.forEach(data => {
     document.querySelector("#output").innerHTML +=
-    `<h2>${data.login}</h2>
-    <img src="${data.avatar_url}">`
+    `<div>
+    <h2>${data.login}</h2>
+    <img src="${data.avatar_url}">
+    </div>`
     })
 }

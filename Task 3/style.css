@@ -59,3 +59,27 @@
   border-radius: 5px;
   background-color: #fff;
 }
+
+/*custom*/
+
+#output{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#output img{
+  height: 150px;
+}
+@media (min-width: 768px) {
+  #output{
+    grid-template-columns: 1fr 1fr;
+  }
+  #output img{
+    height: 250px;
+  }
+}
+@media (min-width: 1024px) {
+  #output{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
